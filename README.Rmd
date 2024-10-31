@@ -1,0 +1,58 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# elaacoustics
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of elaacoustics is to ...
+
+## Installation
+
+You can install the development version of elaacoustics like so:
+
+``` r
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+## Example
+
+This is an example of how to use the basemaps for each lake.
+```{r example1}
+library(elaacoustics)
+library(ggplot2)
+basemap_lake379
+```
+
+This is an example of how to add a point to basemaps for each lake.
+```{r example2}
+library(elaacoustics)
+library(ggplot2)
+basemap_lake379 + geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4)
+```
+
+This is an example of how to combine multiple lake files on a single plot.
+```{r example3}
+library(elaacoustics)
+library(ggplot2)
+ggplot()+ 
+  geom_sf(data = shape_lake379, fill = 'blue') + 
+  geom_sf(data = shape_lake259, fill = 'blue') +
+  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4, colour = "yellow") +
+  theme_bw() +
+  ylab("Latitude") + xlab("Longitude") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
