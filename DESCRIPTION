@@ -2,7 +2,7 @@ Package: elaacoustics
 Title: Analytical Tools for ILK's ELA Acoustic Surveys
 Version: 0.0.0.9000
 Authors@R: 
-    person("Jeremy", "Holden", "jeremy.holden@ontario.ca", role = c("aut", "cre"),
+    person(given = "Jeremy", family = "Holden", email = "jeremy.holden@ontario.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8411-5929"))
 Description: This package provides standard analysis code used by the ILK Team for the ELA acoustic surveys. Functions include a report template, EV COM code and various plotting templates.
 License: MIT + file LICENSE
