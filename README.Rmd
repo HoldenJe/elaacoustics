@@ -32,7 +32,7 @@ devtools::install_github("HoldenJe/elaacoustics")
 ## Example
 
 This is an example of how to use the basemaps for each lake.
-```{r example1, warnings = FALSE}
+```{r example1, warning = FALSE}
 library(elaacoustics)
 library(ggplot2)
 basemap_lake379
@@ -41,7 +41,10 @@ basemap_lake379
 This is an example of how to add a point to the basemap of the lake.
 ```{r example2}
 basemap_lake379 + 
-  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4)
+  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4) +
+  theme_bw() +
+  ylab("Latitude") + xlab("Longitude")
+
 ```
 
 This is an example of how to combine multiple lake files on a single plot and add customization.

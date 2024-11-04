@@ -28,7 +28,6 @@ This is an example of how to use the basemaps for each lake.
 ``` r
 library(elaacoustics)
 library(ggplot2)
-#> Warning: package 'ggplot2' was built under R version 4.4.1
 basemap_lake379
 ```
 
@@ -38,7 +37,9 @@ This is an example of how to add a point to the basemap of the lake.
 
 ``` r
 basemap_lake379 + 
-  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4)
+  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4) +
+  theme_bw() +
+  ylab("Latitude") + xlab("Longitude")
 ```
 
 <img src="man/figures/README-example2-1.png" width="100%" />
