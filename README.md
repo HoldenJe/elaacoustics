@@ -3,17 +3,22 @@
 
 # elaacoustics
 
-<!-- badges: start -->
-<!-- badges: end -->
+Analytical Tools for ILK’s ELA Acoustic Surveys
 
-The goal of elaacoustics is to …
+<!-- badges: start -->
+
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+<!-- badges: end -->
 
 ## Installation
 
-You can install the development version of elaacoustics like so:
+This package is not available at this time on CRAN. You can install
+`elaacoustics` from the GitHub repository using
+`devtools::install_github()`.
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("HoldenJe/elaacoustics")
 ```
 
 ## Example
@@ -29,22 +34,19 @@ basemap_lake379
 
 <img src="man/figures/README-example1-1.png" width="100%" />
 
-This is an example of how to add a point to basemaps for each lake.
+This is an example of how to add a point to the basemap of the lake.
 
 ``` r
-library(elaacoustics)
-library(ggplot2)
-basemap_lake379 + geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4)
+basemap_lake379 + 
+  geom_point(aes(x = -93.799462, y = 49.708170), pch = 13, size = 4)
 ```
 
 <img src="man/figures/README-example2-1.png" width="100%" />
 
 This is an example of how to combine multiple lake files on a single
-plot.
+plot and add customization.
 
 ``` r
-library(elaacoustics)
-library(ggplot2)
 ggplot()+ 
   geom_sf(data = shape_lake379, fill = 'blue') + 
   geom_sf(data = shape_lake259, fill = 'blue') +
