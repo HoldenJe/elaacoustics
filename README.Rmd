@@ -83,3 +83,10 @@ all_ev_files <- dir(recursive = TRUE, pattern = "EV$", full.names = TRUE)
 lapply(all_ev_files, export_ELA_data)
 ```
 
+## Creating *.mif files for Echoview
+You can create MapInfo File format *.mif files from the shapefiles that can then be used as background maps within Echoview.
+
+```{r MakeMif, eval=FALSE}
+sf::st_write(shape_lake622, "L622.mif", driver = "MapInfo File")
+```
+
