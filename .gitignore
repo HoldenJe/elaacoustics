@@ -7,3 +7,8 @@
 *.evi
 *.evwx
 *.evb
+
+# files created during testing
+data-raw/ELA_TEST/fishtracks.csv
+data-raw/ELA_TEST/intg.csv
+data-raw/ELA_TEST/single_targets_transect.csv
