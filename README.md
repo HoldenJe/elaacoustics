@@ -86,3 +86,14 @@ adjusted within the data file
 It is not required that the *Survey* analysis region be created manually
 as the function will automatically create the necessary line relative
 region prior to export.
+
+``` r
+library(elaacoustics)
+
+# Export 1 EV file
+export_ELA_data("myev.EV")
+
+# export multiple EV files
+all_ev_files <- dir(recursive = TRUE, pattern = "EV$", full.names = TRUE)
+lapply(all_ev_files, export_ELA_data)
+```

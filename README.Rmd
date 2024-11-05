@@ -71,3 +71,15 @@ It is expected that the survey has been processed using the appropriate file str
 3. Fish track detection has been completed and manually inspected to verify that only valid fish tracks remain  
 4. If required, *NearSurfaceExclusion* and *Thermocline* lines have adjusted within the data file  
 It is not required that the *Survey* analysis region be created manually as the function will automatically create the necessary line relative region prior to export.
+
+```{r export, eval=FALSE}
+library(elaacoustics)
+
+# Export 1 EV file
+export_ELA_data("myev.EV")
+
+# export multiple EV files
+all_ev_files <- dir(recursive = TRUE, pattern = "EV$", full.names = TRUE)
+lapply(all_ev_files, export_ELA_data)
+```
+
