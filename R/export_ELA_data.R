@@ -15,14 +15,6 @@
 #' lapply(all_ev_files, export_ELA_data)
 #' }
 
-# for testing only
-# devtools::load_all()
-# home <- here::here()
-# setwd(here::here("data-raw"))
-# evfile <- "ELA_TEST/ELA_TEST.EV"
-# calfile <- "Simrad_ELA_2024.ecs"
-# export_ELA_data("ELA_TEST/ELA_TEST.EV", "Simrad_ELA_2024.ecs")
-
 export_ELA_data <- function(evfile, calfile){
   # load Echoview ----
   suppressWarnings(require(usethis))
