@@ -21,7 +21,7 @@ This package is not available at this time on CRAN. You can install
 devtools::install_github("HoldenJe/elaacoustics")
 ```
 
-## Example
+## Plotting Examples
 
 This is an example of how to use the basemaps for each lake.
 
@@ -58,3 +58,31 @@ ggplot()+
 ```
 
 <img src="man/figures/README-example3-1.png" width="100%" />
+
+## Exporting Data
+
+Functions used for exporting data from [Echoview](https://echoview.com/)
+require:
+
+1.  A valid [Echoview](https://echoview.com/) license with automation
+    module.  
+2.  `RDCOMClient`installed. If `RDCOMClient` failed to install when
+    `erieacoustics` was installed please review installation
+    instructions on [RDCOMCLient Github
+    page](https://github.com/omegahat/RDCOMClient).
+
+### Primary Exports for Analysis
+
+It is expected that the survey has been processed using the appropriate
+file structure and analysis template and the following tasks have been
+completed:  
+1. Detected bottom line has been edited to appropriately fit bottom  
+2. Bad data regions have been identified (within transect as well as
+off-transect areas)  
+3. Fish track detection has been completed and manually inspected to
+verify that only valid fish tracks remain  
+4. If required, *NearSurfaceExclusion* and *Thermocline* lines have
+adjusted within the data file  
+It is not required that the *Survey* analysis region be created manually
+as the function will automatically create the necessary line relative
+region prior to export.
