@@ -88,7 +88,7 @@ test_that("shape_lake622 is a valid sf object", {
 
 test_that("Coordinate is within lake622 boundary", {
   # Define the coordinate to check
-  point <- st_sfc(st_point(c(-93.837532,  49.764347)), crs = st_crs(shape_lake622))
+  point <- st_sfc(st_point(c(-93.848461, 49.762933)), crs = st_crs(shape_lake623))
 
   # Test if the point falls within any of the polygons in shape_lake622
   point_within_boundary <- any(st_contains(shape_lake622, point, sparse = FALSE))
@@ -119,7 +119,7 @@ test_that("shape_lake623 is a valid sf object", {
 
 test_that("Coordinate is within lake623 boundary", {
   # Define the coordinate to check
-  point <- st_sfc(st_point(c(-93.848461, 49.762933)), crs = st_crs(shape_lake623))
+  point <- st_sfc(st_point(c(-93.837532,  49.764347)), crs = st_crs(shape_lake622))
 
   # Test if the point falls within any of the polygons in shape_lake623
   point_within_boundary <- any(st_contains(shape_lake623, point, sparse = FALSE))
