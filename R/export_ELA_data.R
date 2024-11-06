@@ -82,7 +82,7 @@ export_ELA_data <- function(evfile, calfile){
 
   if(!HasSurveyRegion){
     # Create survey region if not already done
-    TopLine = EVFile[['Lines']]$FindByName('NearSurfaceExclusion') # set top line
+    TopLine = EVFile[['Lines']]$FindByName('Surface') # set top line
     BottomLine = EVFile[['Lines']]$FindByName('Bottom_Backstepped') # set bottom line
     NewRegion = FinalSv$CreateLineRelativeRegion("Survey",TopLine,BottomLine,-1,-1)
     EpiClassObj = EVFile[['RegionClasses']]$FindByName('Unclassified regions')
